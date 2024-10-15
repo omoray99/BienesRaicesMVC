@@ -1,0 +1,40 @@
+@import '../base/variables';
+.alerta{
+    padding: .5rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+
+    &.error{
+        background-color: rgb(189, 7, 7);
+    }
+    &.exito{
+        background-color: $verde;
+    }
+}
+table.propiedades{
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+    thead{
+        background-color: $rojo;
+        th{
+            color: $blanco;
+            padding: 1rem;
+        }
+    }
+
+    .imagen-tabla{
+        width: 10rem;
+    }
+    .lista td{
+        box-sizing: border-box;
+        border-bottom: 1.5px solid $grisClaro;
+        padding-bottom: 2rem;
+    }
+}
+.imagen-small{
+    width: 20rem;
+}

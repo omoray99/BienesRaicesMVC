@@ -1,0 +1,53 @@
+.no-webp .inicio {
+    background-image: url(../img/header.jpg);
+}
+.webp .inicio {
+    background-image: url(../img/header.webp);
+}
+.header{
+    .logo-header {
+        max-width: 100%;
+        width: 28rem;
+        height: auto;
+    }
+    background-color: $grisOscuro;
+    padding: 1rem 0 3rem 0;
+
+    &.inicio{
+        background-position: center center; // para que  la imagen se vea a partir del centro tanto veritcal como horizontalmente
+        background-size: cover; // para que tome todo el espacio disponible
+
+        @include tablet{
+            min-height: 70rem;
+        }
+        .contenido-header{
+            @include tablet{
+                min-height: 70rem;
+            } 
+        }
+    }
+}
+
+.contenido-header{ //esta clase rodea tanto la barra como h1, si queremos acomodar un elemento, recuerda tenemos que ir junto al padre, tanto como flex como grid funciona del padre hacia el hijo
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1{
+        text-align: left;
+        color: $blanco;
+        font-weight: $bold;
+        line-height: 2;
+        max-width: 60rem;
+    }
+}
+.navegacion{
+    a{
+        font-size: 2.6rem;
+        &:hover,
+        &.active{
+            color: $verde;
+        }
+
+    }
+}
